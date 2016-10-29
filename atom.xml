@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title><![CDATA[Wigmore Hall]]></title>
-    <link href="/atom.xml" rel="self"/>
-    <link href="/"/>
-    <updated>2016-10-29T15:23:46+00:00</updated>
-    <id>/</id>
+    <link href="http://daverees4.webfactional.com/play/stagecast-wigmore-demo/atom.xml" rel="self"/>
+    <link href="http://daverees4.webfactional.com/play/stagecast-wigmore-demo/"/>
+    <updated>2016-10-29T15:39:13+00:00</updated>
+    <id>http://daverees4.webfactional.com/play/stagecast-wigmore-demo/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
     </feed>
