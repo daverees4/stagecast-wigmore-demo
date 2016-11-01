@@ -19,17 +19,6 @@
 <body>
   <div class="container">
     <header>
-      <div class="user">
-        <div class="user-nav">
-          <ul>
-            <li>
-              <a class="js-login-popup-button" href="/sign-in?redirect=L2Jhc2tldA==">Please sign in</a>
-            </li>
-            <li><a href="/basket">Basket (<span id="cart_counter">0</span>)</a></li>
-            <li><a href="/new-account">New Account</a></li>
-          </ul>
-        </div>
-      </div>
       <div class="header-body">
         <div class="header-logo"><a href="/">Wigmore Hall</a></div>
           <div class="header-phone">
@@ -172,50 +161,57 @@
   
   <section class="primary-content">
 
-                <div class="row" id="videoplayer">
-  <div class="large-8 medium-8 columns">
+                <div class=" breadcrumb">
+  <ul>
+    <li><a href="/" class="pathway">Back to Foyer</a></li>
+  </ul>
+</div>
+<div class="sc-row" id="videoplayer">
+  <div class="medium-9 medium-centered columns player-container">
     <div class="flowplayer flex-video widescreen play-button" data-cuepoints="[90.5, 340, 526, 801, 1023]" data-generate_cuepoints="true">
       <video>
         <source type="application/x-mpegurl" src="http://d3rjjofeplqma4.cloudfront.net/transcoder/output/yrBlhbKPW0/playlist.m3u8">
       </video>
     </div>
   </div>
-  <div class="large-4 medium-4 columns">
-    <h4>Setlist</h4>
-     <div class="programme-item">
-      <a class="chapter" data-time="90.5" href="#"><h5>Start Me Up</h5></a>
-    </div>
-    <div class="programme-item">
-      <a class="chapter" data-time="340" href="#"><h5>Sad Sad Sad</h5></a>
-    </div>
-    <div class="programme-item">
-      <a class="chapter" data-time="526" href="#"><h5>Tumbling Dice</h5></a>
-    </div> 
-    <div class="programme-item">
-      <a class="chapter" data-time="801" href="#"><h5>Ruby Tuesday</h5></a>
-    </div>
-    <div class="programme-item">
-     <a class="chapter" data-time="1023" href="#"><h5>Between a Rock and a Hard Place</h5></a>
-    </div>
-  </div>
-</div>
-<div class="sc-row" id="titlesc-row">
-  <div class="large-12 columns">
-    <h3>The Rolling Stones: Live at the Max (1991)</h3>
-  </div>
 </div>
 <div class="sc-row">
-  <div class="large-6 medium-6 columns">
-    <h4>Concert Information</h4>
+  <div class="columns medium-6">
+
+    <h3>The Rolling Stones: Live at the Max (1991)</h3>
+     <h5>Views: 1,025</h5>
+    <h4 class="programme-title">Programme</h4>
+    <ul class="accordion-section">
+     <li class="programme-item accordion-title">
+      <a class="chapter" data-time="90.5" href="#"><h5>Start Me Up</h5></a>
+    </li>
+    <li class="programme-item accordion-title">
+      <a class="chapter" data-time="340" href="#"><h5>Sad Sad Sad</h5></a>
+    </li>
+    <li class="programme-item accordion-title">
+      <a class="chapter" data-time="526" href="#"><h5>Tumbling Dice</h5></a>
+    </li> 
+    <li class="programme-item accordion-title">
+      <a class="chapter" data-time="801" href="#"><h5>Ruby Tuesday</h5></a>
+    </li>
+    <li class="programme-item accordion-title">
+     <a class="chapter" data-time="1023" href="#"><h5>Between a Rock and a Hard Place</h5></a>
+    </li>
+    </ul>
+  </div>
+  <div class="medium-6 columns">
     <ul class="tabs" data-tabs id="example-tabs">
       <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">About this Concert</a></li>
       <li class="tabs-title"><a href="#panel2">Personnel</a></li>
+         <li class="tabs-title"><a href="#panel3">Comments</a></li>
     </ul>   
     <div class="tabs-content" data-tabs-content="example-tabs">
       <div class="tabs-panel is-active" id="panel1">
+           
         <p>Rolling Stones: Live at the Max (also known as Stones at the Max) is a concert film by The Rolling Stones released in 1991. It was specially filmed in IMAX during the Urban Jungle Tour in Europe in 1990. It was one of the first attempts at presenting entertainment in the IMAX format.</p>
         <p>Rolling Stones: Live at the Max premiered 25 October 1991 in Los Angeles at the California Museum of Science and Industry. In the UK it was shown at the National Museum of Photography, Film and Television in Bradford, Yorkshire in 1992. The tagline was "Larger than life".</p>
-        </div>
+         
+      </div>
       <div class="tabs-panel" id="panel2">
         <h5>The Rolling Stones</h5>
         <ul>
@@ -226,6 +222,7 @@
           <li>Bill Wyman - bass guitar</li>
         </ul>
         <h5>Additional personnel</h5>
+        <ul>
           <li>Matt Clifford - keyboards, backing vocals, French horn, percussion</li>
           <li>Chuck Leavell - keyboards, backing vocals, percussion</li>
           <li>Bobby Keys - saxophone</li>
@@ -233,13 +230,34 @@
           <li>Bernard Fowler - backing vocals, percussion</li>
           <li>Sophia Jones - backing vocals</li>
           <li>Lorelei McBroom - backing vocals</li>
+        </ul>
       </div>
-    </div>    
-  </div>
-  <div class="large-6 medium-6 columns">
-<a class="twitter-timeline" data-height="600" data-theme="dark" href="https://twitter.com/wigmore_hall"></a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>          
+ <div class="tabs-panel" id="panel3">
+       <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = '//wigmore-hall-stagecast-demo.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                      </div>
+    </div>            
   </div>
 </div>
+
 <div class="sc-row">
   <div class="large-12 columns">
     <h4>Related Videos</h4>
@@ -496,7 +514,8 @@
             </div>
         </div><!-- /content-wrapper -->
     </div><!-- /footer-info -->
-</footer>
+  </footer>
+  </div>
 
     <script src="http://daverees4.webfactional.com/play/stagecast-wigmore-demo/js/jquery.js"></script>
     <script src="http://daverees4.webfactional.com/play/stagecast-wigmore-demo/js/what-input.js"></script>

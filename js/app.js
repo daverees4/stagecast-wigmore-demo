@@ -6,7 +6,7 @@ flowplayer(function(api){
       $('.programme-item').removeClass('now-playing');
       $(this).parent().addClass('now-playing');
       api.play();
-      $("html, body").animate({ scrollTop: 0 }, "slow");
+      $("html, body").animate({ scrollTop: 184 }, "slow");
     });
     
     api.on("seek", function(e) {
