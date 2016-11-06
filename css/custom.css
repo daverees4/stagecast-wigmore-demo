@@ -149,7 +149,7 @@ row {
 
 
 .now-playing {
-  background-color: #b01c40 !important;
+  background-color: #bfa055 !important;
 }
 
 .now-playing a h5 {
@@ -483,6 +483,13 @@ row {
  .flowplayer .fp-progress,  .flowplayer .fp-volumelevel { background-color: #b01c40}
  .flowplayer .fp-buffer { background-color: rgba(249, 249, 249, 1)}
  .flowplayer { background-image: url("img/poster.jpg")}
+ 
+ #hlsjsvod {
+  background-image: url(//drive.cdn.flowplayer.org/202777/84049-snap.jpg);
+}
+#hlsjslive {
+  background-color: #2f2f4f;
+}
 
  
  
@@ -614,7 +621,11 @@ row {
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
 	border-radius: 20px;
-	background: #fff;
+  background: #869791;
+}
+
+#videoplayer > .owl-controls {
+  background-color: #fff;
 }
 
 .owl-theme .owl-controls .owl-page.active span,
