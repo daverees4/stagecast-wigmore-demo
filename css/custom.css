@@ -22,6 +22,15 @@
   background-color: #fff;
 }
 
+.view-count {
+  color:#990037;
+  text-align: right;
+}
+
+.zeropad {
+  padding: 0;
+}
+
 .programme-title {
   margin-top: 0px;
 }
