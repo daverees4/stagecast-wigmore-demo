@@ -61,7 +61,9 @@ flowplayer(function(api){
 });
 
 
-  $(".owl-slider").owlCarousel();
+  $(".owl-slider").owlCarousel({
+    items: 3,
+  });
   $(".top-channel-slider").owlCarousel({
       navigation : false, // Show next and prev buttons
       slideSpeed : 300,

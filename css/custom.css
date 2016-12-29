@@ -31,6 +31,10 @@
   padding: 0;
 }
 
+.title-box {
+  border: 1px solid #e6e6e6;
+}
+
 .programme-title {
   margin-top: 0px;
 }
@@ -491,7 +495,7 @@ row {
  .flowplayer .fp-timeline { background-color: rgba(0, 0, 0, 0.5)}
  .flowplayer .fp-progress,  .flowplayer .fp-volumelevel { background-color: #b01c40}
  .flowplayer .fp-buffer { background-color: rgba(249, 249, 249, 1)}
- .flowplayer { background-image: url("img/poster.jpg")}
+
  
  #hlsjsvod {
   background-image: url(//drive.cdn.flowplayer.org/202777/84049-snap.jpg);
