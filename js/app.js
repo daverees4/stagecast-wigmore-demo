@@ -1,13 +1,16 @@
 $(document).foundation();
 
-flowplayer(function(api){
+
     $('.chapter').on('click', function() {
-      api.seek($(this).data('time'));
+      player.currentTime($(this).data('time'));
       $('.programme-item').removeClass('now-playing');
       $(this).parent().addClass('now-playing');
-      api.play();
+      player.play();
       $("html, body").animate({ scrollTop: 184 }, "slow");
     });
+
+flowplayer(function(api){
+
     
     api.on("seek", function(e) {
       var counter=-1;

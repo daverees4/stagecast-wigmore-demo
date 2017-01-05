@@ -16,6 +16,10 @@
   <link href="http://stagecast.net/demo/css/app.css" rel="stylesheet">
   <link href="http://stagecast.net/demo/css/custom.css" rel="stylesheet">
    <link href="http://stagecast.net/demo/css/wigmore-styles.css" rel="stylesheet">
+    <link href="http://vjs.zencdn.net/5.14.1/video-js.css" rel="stylesheet">
+    <script src="http://vjs.zencdn.net/5.14.1/video.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/4.0.3/videojs-contrib-hls.js"></script>
+    
 
 </head>
 <body>
@@ -168,15 +172,18 @@
     <li><a href="http://stagecast.net/demo" class="pathway">Back to Foyer</a></li>
   </ul>
 </div>
-<style>
-   .flowplayer { background-image: url("http://stagecast.net/demo/css/img/berg-poster.jpg")}
-</style>
-<div class="sc-row " id="videoplayer">
+
+<div class="sc-row" id="videoplayer">
   <div class="medium-9 medium-centered columns player-container">
-    <div class="flowplayer flex-video widescreen play-button" data-cuepoints="[265, 3815]" data-generate_cuepoints="true">
-      <video>
-        <source type="application/x-mpegurl" src="http://d3rjjofeplqma4.cloudfront.net/transcoder/output/GuL4G8XT6b/playlist.m3u8">
+    <div class="flex-video widescreen">
+      <video id=example-video class="video-js vjs-default-skin vjs-big-play-centered vjs-16-9" poster="http://stagecast.net/demo/css/img/berg-poster.jpg" controls>
+        <source
+           src="http://d3rjjofeplqma4.cloudfront.net/transcoder/output/GuL4G8XT6b/playlist.m3u8"
+           type="application/x-mpegURL">
       </video>
+      <script>
+      var player = videojs('example-video');
+      </script>
     </div>
   </div>
 </div>
@@ -277,9 +284,15 @@ s.setAttribute('data-timestamp', +new Date());
     </div>
   </div>
 </div>
-
+                
+                
+<div class="sc-row">
+  <div class="columns">
+  <h4>Digital Concert Hall powered by <a href="http://stagecast.net" target="_blank" id="stagecast-link">Stagecast</a></h4>
+  </div>
+</div>
   </section>
-
+   
 <footer>
     <div class="footer-content">
         <div class="row flush-column span-6">
@@ -471,6 +484,8 @@ s.setAttribute('data-timestamp', +new Date());
             </div>
         </div>
     </div><!-- /foooter-content -->
+    
+
     <div class="footer-info">
         <div class="content-wrapper row">
             <div class="footer-logos grid-column span-6">
