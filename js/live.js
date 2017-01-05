@@ -8,7 +8,7 @@ var now_playing;
 function get_livejson(){
     var feedback = $.ajax({
         type: "POST",
-        url: "/livefeed.json",
+        url: "/demo/livefeed.json",
         async: false
     }).complete(function(){
         setTimeout(function(){get_livejson()}, 10000);
