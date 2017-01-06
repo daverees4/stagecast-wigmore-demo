@@ -23,7 +23,7 @@ function get_livejson(){
       }
       
       if (obj.player_state===1) {
-        $('.player-frame').html("<iframe src='https://www.youtube.com/embed/04kop3CvE_s?autoplay=1&start=25&showinfo=0' width='100%' frameborder='0' allowfullscreen></iframe>");
+        $('.player-frame').html("<iframe src='https://www.youtube.com/embed/"+obj.youtubeid+"?autoplay=1&start=25&showinfo=0' width='100%' frameborder='0' allowfullscreen></iframe>");
       }
       
       if (obj.player_state===2) {
