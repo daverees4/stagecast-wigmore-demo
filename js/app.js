@@ -17,9 +17,6 @@ function updatePlaylistInfo() {
 });
 }
 
-player.on("seeked", function (e) {
- updatePlaylistInfo();
-});
 
 
 
