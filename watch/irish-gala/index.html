@@ -182,8 +182,11 @@
            src="http://d3rjjofeplqma4.cloudfront.net/transcoder/output/G4ydKpRoHi/playlist.m3u8"
            type="application/x-mpegURL">
       </video>
-      <script>
+        <script>
       var player = videojs('example-video');
+      player.on("seeked", function (e) {
+        updatePlaylistInfo();
+      });
       </script>
     </div>
   </div>
