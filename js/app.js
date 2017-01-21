@@ -1,40 +1,32 @@
 $(document).foundation();
 
 
-    $('.chapter').on('click', function() {
-      player.currentTime($(this).data('time'));
-      $('.programme-item').removeClass('now-playing');
-      $(this).parent().addClass('now-playing');
+    $('.programme-item').on('click', function() {
+      player.currentTime($(this).children('.chapter').data('starttime'));
       player.play();
       $("html, body").animate({ scrollTop: 184 }, "slow");
     });
+    
+function updatePlaylistInfo() {
+    $('.programme-item').removeClass('now-playing');
+   $(".chapter").each(function() {
+     if(player.currentTime() >= $(this).data('starttime') && player.currentTime() < $(this).data('endtime') ) {
+       $(this).parent().addClass('now-playing');
+     }
+     
+});
+}
+
+player.on("seeked", function (e) {
+ updatePlaylistInfo();
+});
+
+
 
 flowplayer(function(api){
 
     
-    api.on("seek", function(e) {
-      var counter=-1;
-      $(".chapter").each(function() {
-      
-        if(api.video.time<$(this).data('time')) {
-          if(counter!=-1){
-            $('.programme-item').removeClass('now-playing');
-            $('.chapter:eq('+counter+')').parent().addClass('now-playing');
-            return false
-          } else {
-            $('.programme-item').removeClass('now-playing');
-              return false
-          }
-        } else {
-          counter=counter+1;
-        }      
-        if (counter==($(".chapter").length-1)) {
-           $('.programme-item').removeClass('now-playing');
-            $('.chapter').last().parent().addClass('now-playing');
-          
-        }
-    });
-    })
+
     
     api.on("cuepoint", function(e) {
       console.log("checkpoint!");
@@ -64,8 +56,12 @@ flowplayer(function(api){
 });
 
 
-  $(".owl-slider").owlCarousel({
+  $(".owl-slider-featured").owlCarousel({
     items: 3,
+  });
+  
+  $(".owl-slider-playlist").owlCarousel({
+    items: 5,
   });
   $(".top-channel-slider").owlCarousel({
       navigation : false, // Show next and prev buttons
